@@ -1,0 +1,24 @@
+<button>New Task</button>
+<table class="table table-bordered">
+  <thead>
+      <tr>
+          <th>Id</th>
+          <th>ProjectId</th>
+          <th>Status</th>
+          <th>AssignedToUserId</th>
+          <th>Detail</th>
+          <th>CreatedOn</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr *ngFor="let task of tasks">
+          <td>{{ task.id }}</td>
+          <td>{{ task.ProjectId }}</td>
+          <td>{{ task.Status }}</td>
+          <td>{{ task.AssignedToUserId }}</td>
+          <td>{{ task.Status }}</td>
+          <td>{{ task.Status }}</td>
+      </tr>
+  </tbody>
+</table>
+  

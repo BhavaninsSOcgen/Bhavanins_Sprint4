@@ -1,0 +1,20 @@
+<button>New User</button>
+<table class="table table-bordered">
+  <thead>
+      <tr>
+          <th>Id</th>
+          <th>FirstName</th>
+          <th>LastName</th>
+          <th>Email</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr *ngFor="let user of users">
+          <td>{{ user.id }}</td>
+          <td>{{ user.FirstName }}</td>
+          <td>{{ user.LastName }}</td>
+          <td>{{ user.email }}</td>
+      </tr>
+  </tbody>
+</table>
+  
