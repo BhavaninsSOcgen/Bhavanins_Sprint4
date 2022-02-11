@@ -8,16 +8,19 @@ import { ProjectModule } from '../project/project.module';
 
 @NgModule({
   declarations: [
-    UserComponent
+    UserComponent,
+    
   ],
   imports: [
     CommonModule,
     TaskModule,
-    ProjectModule
-    
+    ProjectModule,
+    UserModule
   ],
   exports : [
-    UserComponent,
+   UserComponent,
+   UserModule
+   
    
   ]
 })

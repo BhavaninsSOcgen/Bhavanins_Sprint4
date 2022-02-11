@@ -12,10 +12,13 @@ import { TaskModule } from '../task/task.module';
   ],
   imports: [
     CommonModule,
+    UserModule,
+    TaskModule
   
   ],
   exports : [
     ProjectComponent,
+    
     
   ]
 })

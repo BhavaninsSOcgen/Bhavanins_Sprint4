@@ -1,9 +1,10 @@
 import { Component, NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { AppComponent } from './app.component';
+import { UserComponent } from './user/user.component';
 import { ProjectComponent } from './project/project.component';
 import { TaskComponent } from './task/task.component';
-import { UserComponent } from './user/user.component';
+
 
 const routes: Routes = [
   { path: 'user', component: AppComponent, children:[

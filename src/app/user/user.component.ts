@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { UserService } from '../services/user.service';
 
 @Component({
   selector: 'app-user',
@@ -7,41 +8,18 @@ import { Component, OnInit } from '@angular/core';
 })
 export class UserComponent implements OnInit {
 
-  constructor() { }
+users: any
+constructor(private userService : UserService) { }
 
-  ngOnInit(): void {
+  ngOnInit() {
+    this.getUser();
+  }
+  getUser(){
+    this.userService.getUser().subscribe(
+      data => {
+        this.users = data;
+      }
+    )
   }
 
-
-  headers = ["ID","FirstName", "LastName","Email"];
-
-  rows = [
-  {
-    "ID" : 1,
-    "FirstName" : "Rahul",
-    "LastName" : "Sharma",
-    "Email" : "abc@gmail.com"
-  },
-  {
-    "ID" : 2,
-    "FirstName" : "Rahul",
-    "LastName" : "Sharma",
-    "Email" : "abc@gmail.com"
-  },
-  {
-    "ID" : 3,
-    "FirstName" : "Rahul",
-    "LastName" : "Sharma",
-    "Email" : "abc@gmail.com"
-  },
-  {
-    "ID" : 4,
-    "FirstName" : "Rahul",
-    "LastName" : "Sharma",
-    "Email" : "abc@gmail.com"
-  }
-];
-
-  
 }
-
